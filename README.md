@@ -2,8 +2,11 @@
 python program to create/manage phonebooks and be able to backup phonebooks to a backup server
 
 # Instructions
-start the server: python3 server.py
-start the phonebook program: python3 main.py
+start the server: 
+        python3 server.py
+        
+start the phonebook program: 
+        python3 main.py
 
 # features
 1. create empty phonebooks , add contacts , delete contacts, list contacts, query contact
