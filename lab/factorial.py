@@ -42,7 +42,7 @@ factorialV1(get_input())
 
 print("\nFactorial Algorithm using recursion:\n")
 print("____________________________________\n")
-print("{}".format(factorialV2(5)))
+print("{}".format(factorialV2(get_input())))
 
 
 print("\nFactorial Algorithm using for loop:\n")
