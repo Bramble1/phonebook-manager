@@ -1,7 +1,10 @@
 import sys
 import os
-#calculate the average of three exam marks
 
+#Function definitions
+#_____________________________________________________________
+
+#calculate the average of three exam marks
 def boundary_check(average):
     if (average>=65):
         print("Pass! average={}".format(average))
@@ -29,8 +32,7 @@ def calculate_average(exam_names):
 
     average = average * (3**-1)
 
-    boundary_check(average)
+    boundary_check(average) #compounding functions i.e calling a function within a function
 
-#Main
-
+#Main Where we call our function
 calculate_average(("Maths","English","ICT"))

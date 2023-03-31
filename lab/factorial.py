@@ -1,5 +1,7 @@
 import sys
 
+#function definitions
+#_____________________________________________
 def get_input():
     number=int(input("Enter a number:"))
     return number
@@ -32,7 +34,7 @@ def factorialV3(number):
     print(number)
 
 
-#main code
+#main code Where we call our created functions
 #_________________________________________________
 
 print("Factorial Algorithm using While loop:\n")

@@ -3,6 +3,10 @@ import sys
 #input an integer between two limits, give the user 3 attempts to enter a number
 #within the specified boundary
 
+
+
+#Function definitions
+#_______________________________
 def boundary_check(min,max):
     number=-1
     tries=0
@@ -18,5 +22,6 @@ def boundary_check(min,max):
     print("You entered {}.\n".format(number))
 
 
-#Main code
+#Main code Where we call our function
+#________________________________________
 boundary_check(1,100)

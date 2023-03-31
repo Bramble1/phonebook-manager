@@ -3,7 +3,7 @@ import sys
 #count vowels in a string vowels = {a,e,i,o,u,y}
 
 
-#linear o(n)
+#linear o(n) , 
 def count_vowels(buffer):
     counter=0
     buffer.lower()
