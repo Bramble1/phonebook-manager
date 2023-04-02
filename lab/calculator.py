@@ -9,6 +9,10 @@ def get_input():
     return number
 
 
+#HOW ABOUT keep the same, but if the user enters multiple numbers for exponent, it just
+#adds onto the exponent number ,before appling it to result
+
+
 def addition(values,element_number):
     sum=0
     for i in range(0,element_number,1):
@@ -37,6 +41,14 @@ def division(values,element_number):
 
     return (sum)
 
+def exponent(base,values,element_number):
+    exponent=0
+    for i in range(0,element_number,1):
+        exponent+=values[i]
+    sum = base**exponent
+    return (sum)
+     
+
 #or just interpret each line the user enters
 # thus if they enter a '+' and then followed by a list of numbers, they
 #wish to be in the sum, so will need to be a string
@@ -53,10 +65,8 @@ def test():
 
 def menu():
     result=0
-    
-
-    os.system('clear')
     while(1):
+        os.system('clear')
         print("\tResult={}\n".format(result))
         print("(1) addition\n(2) subtraction\n(3) multiplication\n(4) division\n(5)exponents\n(6)reset result\n")
         option=get_input()
@@ -82,8 +92,12 @@ def menu():
                 result=1
            # result *=division(numbers,len(numbers))
             sum =division(numbers,len(numbers))
-            print("sum={}".format(sum))
             result*=sum
+        elif(int(option)==5):
+            result = exponent(result,numbers,len(numbers))
+        elif(int(option)==6):
+            result=0
+
 
          
 
