@@ -15,6 +15,7 @@ ages=[12,18,33,84,45,67,12,82,95,16,10,23,43,29,40,34,30,16,44,69,70,74,38,65,36
 
 
 def age_processing_task():
+    counter=0
     #1.
     length=len(ages)
     #2.
@@ -24,13 +25,22 @@ def age_processing_task():
     for i in range(0,length,1):
         ages[i]=ages[i]+1
         print("{},".format(ages[i]))
-    #4.
-    for i in range(0,length,1):
-        if not(ages[i]>=16 and ages[i]<=25):
+    #4. & 5.
+    os.system('clear')
+    i=0
+    while(i<len(ages)):
+        if(ages[i]<16 or ages[i]>25):
             ages.pop(i)
+            i=0
+        i=i+1
+    #5 & 6.
+    ages.sort()
     for i in range(0,len(ages),1):
-        print("{},".format(ages[i]))
-
+        print("{}".format(ages[i]))
+    counter=len(ages)
+    print("counter={}".format(counter))
+    #7.
+    print("percentage of ages between 16-25={}%".format(int((counter * length**-1)*100))) 
 
 #Main code resides here_______________________________________________________________________
 
