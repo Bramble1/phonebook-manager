@@ -27,8 +27,12 @@ def populate_table(con,cursor):
     cursor.execute('Insert into People(LastName,FirstName) values(\'Dhillon\',\'Sam\')')
 
 
+def update_table(cursor):
+    cursor.execute('Update People set FirstName=\'Rose\' where FirstName=\'July\'')
 
-def print_table(cusor):
+
+
+def print_table(cursor):
     for row in cursor.execute('select * from People'):
         print(row)
 
@@ -42,6 +46,8 @@ cursor=con.cursor()
 create_table(con,cursor)
 
 populate_table(con,cursor)
+
+update_table(cursor)
 
 con.commit()
 
